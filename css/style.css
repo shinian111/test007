@@ -1,0 +1,299 @@
+/* 样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    color: white;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.search-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+}
+
+.search-box {
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 8px 15px;
+    align-items: center;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.breadcrumb {
+    background: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tree-container, .info-container {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.3s ease;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.tree-container {
+    position: relative;
+}
+
+.tree-container:hover, .info-container:hover {
+    transform: translateY(-5px);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 动态树形结构样式 */
+.tree-node {
+    list-style: none;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.tree-node:hover {
+    background-color: #f1f8ff;
+}
+
+.tree-node.active {
+    background-color: #e3f2fd;
+    border-left: 3px solid #3498db;
+}
+
+.tree-node .icon {
+    margin-right: 8px;
+    color: #3498db;
+    width: 20px;
+    display: inline-block;
+}
+
+.tree-node .title {
+    font-size: 1rem;
+}
+
+.tree-children {
+    padding-left: 20px;
+    margin-left: 10px;
+    border-left: 1px dashed #bdc3c7;
+}
+
+/* 信息展示区域 */
+.info-display {
+    padding: 20px;
+    line-height: 1.6;
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.info-header {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-content {
+    margin-bottom: 20px;
+}
+
+.info-content ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.info-content li {
+    margin-bottom: 8px;
+}
+
+.info-content p {
+    margin-bottom: 10px;
+}
+
+/* 措施信息框样式 */
+.measures-info {
+    background: #e3f2fd;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+.info-box {
+    background: #e3f2fd;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 0.95rem;
+}
+
+.info-box h3 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.instructions {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.instructions ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.instructions li {
+    margin: 8px 0;
+}
+
+.no-results {
+    color: #e74c3c;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.notes-panel {
+    background: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.notes-panel.hidden {
+    display: none;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #6c757d;
+    padding: 40px 20px;
+}
+
+.placeholder-text i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #adb5bd;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .search-container {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    header {
+        padding-bottom: 30px;
+    }
+}
