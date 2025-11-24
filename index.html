@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPB FA2 ST44/46 设备故障诊断与处理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tools"></i> IPB FA2 ST44/46 设备故障诊断与处理</h1>
+            <div class="subtitle">设备故障类别、失效项与处理措施</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="搜索故障类别、失效项...">
+                </div>
+            </div>
+        </header>
+        
+        <div class="breadcrumb" id="breadcrumb"></div>
+        
+        <div class="content">
+            <div class="tree-container">
+                <h2 class="section-title"><i class="fas fa-sitemap"></i>故障分类树</h2>
+                <div class="no-results" id="noResults">未找到匹配的故障项</div>
+                <div id="treeContainer"></div>
+            </div>
+            
+            <div class="info-container">
+                <h2 class="section-title"><i class="fas fa-clipboard-list"></i>故障处理信息</h2>
+                <div class="info-display" id="contentArea">
+                    <div class="placeholder-text">
+                        <i class="fas fa-hand-pointer"></i>
+                        <p>请从左侧树状图中选择一个故障项</p>
+                    </div>
+                </div>
+                
+                <div class="notes-panel hidden" id="notesPanel"></div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-info-circle"></i>注意！</h3>
+                    <p>1. 气动过程如遇列表中未出现的失效，对于2B项，先更换对应的失效口工装，再直接盲板测试阀泄漏</p>
+                    <p>2. 如遇failure memory，列表中未出现的先查看excel failure memory，确认是否是磁阀线圈电阻问题，如不是更换所Pin</p>
+                    <p>3. 此页面仅作参考，可靠内容见FTA。<br>最新更新于2025.9.7</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-info-circle"></i>使用说明</h3>
+                    <p>1. 点击左侧树状结构中的故障项查看详细信息</p>
+                    <p>2. 点击文件夹图标可展开/折叠子目录</p>
+                    <p>3. 在搜索框中输入故障类别或失效项可快速定位</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
