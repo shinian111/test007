@@ -1,0 +1,37 @@
+[
+    {
+        "title": "FTA-重点关注",
+        "type": "folder",
+        "source": "data/fta-focus.json"
+    },
+    {
+        "title": "原材料",
+        "type": "folder", 
+        "source": "data/material-issues.json"
+    },
+    {
+        "title": "工装/设备",
+        "type": "folder",
+        "source": "data/equipment-issues.json"
+    },
+    {
+        "title": "设备",
+        "type": "folder",
+        "source": "data/equipment-issues.json"
+    },
+    {
+        "title": "工装",
+        "type": "folder",
+        "source": "data/tooling-issues.json"
+    },
+    {
+        "title": "高压阀",
+        "type": "folder",
+        "source": "data/high-pressure-valve.json"
+    },
+    {
+        "title": "FailureMemory",
+        "type": "folder",
+        "source": "data/failure-memory.json"
+    }
+]
