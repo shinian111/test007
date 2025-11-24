@@ -1,0 +1,54 @@
+[
+    {
+        "title": "FTA-重点关注",
+        "type": "folder",
+        "children": [
+            {
+                "title": "⭐铝丝/油壶工装-专项",
+                "type": "folder",
+                "children": [
+                    {
+                        "title": "OS3通道问题",
+                        "type": "folder",
+                        "children": [
+                            {
+                                "title": "dPRes3OS3_2B_IPB 超上限",
+                                "type": "page",
+                                "rootCause": "工装PRV口粘铝丝",
+                                "measures": [
+                                    "清洁PRV黑色密封圈",
+                                    "更换油壶工装",
+                                    "检查铝丝残留"
+                                ]
+                            },
+                            {
+                                "title": "gPRes3OS3_2B_IPB 超上限", 
+                                "type": "page",
+                                "rootCause": "密封圈损坏",
+                                "measures": [
+                                    "更换密封圈",
+                                    "验收工装"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "PRV通道问题",
+                        "type": "folder", 
+                        "children": [
+                            {
+                                "title": "PRV外泄处理",
+                                "type": "page",
+                                "rootCause": "PRV口泄漏",
+                                "measures": [
+                                    "检查A3/A4口泄漏",
+                                    "优先处理A3/A4问题"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
